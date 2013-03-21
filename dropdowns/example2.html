@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Foundation 4</title>
+
+  <link rel="stylesheet" href="../css/normalize.css" />
+  
+  <link rel="stylesheet" href="../css/foundation.css" />
+  
+
+  <script src="../js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Dropdowns - Buttons</h2>
+      <p>Example 2</p>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <a href="#" data-dropdown="drop1">Has Dropdown</a>
+
+      <ul id="drop1" class="f-dropdown" data-dropdown-content>
+        <li><a href="#">This is a link</a></li>
+        <li><a href="#">This is another</a></li>
+        <li><a href="#">Yet another</a></li>
+      </ul>
+    </div>
+    <div class="large-6 columns">
+      <a href="#" data-dropdown="drop1">Has Dropdown</a>
+
+      <ul id="drop1" class="f-dropdown" data-dropdown-content>
+        <li><a href="#">This is a link</a></li>
+        <li><a href="#">This is another</a></li>
+        <li><a href="#">Yet another</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? '../js/vendor/zepto' : '../js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="../js/foundation.min.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
