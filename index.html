@@ -113,31 +113,32 @@
   <script src="js/foundation.min.js"></script>
   
   <script>
-    $(document).foundation();
-    $(document).on('keyup', function (e) {
-      e.preventDefault();
-      if (e.which === 40) {
-        var active = $('.section.active');
+    $(document)
+      .foundation()
+      .on('keyup', function (e) {
+        e.preventDefault();
+        if (e.which === 40) {
+          var active = $('.section.active');
 
-        if (active.next().length > 0) {
-          $('.section.active')
-            .removeClass('active')
-            .next()
-            .addClass('active');
+          if (active.next().length > 0) {
+            $('.section.active')
+              .removeClass('active')
+              .next()
+              .addClass('active');
+          }
         }
-      }
 
-      if (e.which === 38) {
-        var active = $('.section.active');
+        if (e.which === 38) {
+          var active = $('.section.active');
 
-        if (active.prev().length > 0) {
-          $('.section.active')
-            .removeClass('active')
-            .prev()
-            .addClass('active');
+          if (active.prev().length > 0) {
+            $('.section.active')
+              .removeClass('active')
+              .prev()
+              .addClass('active');
+          }
         }
-      }
-    });
+      });
   </script>
 </body>
 </html>
