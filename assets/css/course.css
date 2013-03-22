@@ -1,3 +1,5 @@
 ul.breadcrumbs {
   background: none;
 }
+
+.show-grid .column, .show-grid .columns { border: solid 1px #eee; background: #f4f4f4; }
