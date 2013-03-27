@@ -4688,3 +4688,28 @@ table tfoot tr td {
 .f-dropdown.large {
   max-width: 800px;
 }
+
+.row-example {
+  background: rgba(255, 192, 203, 0.5);
+  padding: 10px;
+  border: solid 1px rgba(255, 192, 203, 0.8);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Container Row Example */
+.row-example {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+.row-example:before, .row-example:after {
+  content: " ";
+  display: table;
+}
+.row-example:after {
+  clear: both;
+}

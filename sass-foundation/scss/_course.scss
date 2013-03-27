@@ -1,0 +1,12 @@
+%row-display {
+  background: rgba(pink, .5);
+  padding: 10px;
+  border: solid 1px rgba(pink, .8);
+  color: rgba(black, .5);
+}
+
+/* Container Row Example */
+.row-example {
+  @include grid-row;
+  @extend %row-display;
+}
