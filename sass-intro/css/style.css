@@ -1,0 +1,189 @@
+/* Nesting Rules */
+.class-name {
+  background-color: #eee;
+}
+.class-name h1 {
+  font-size: 1.4em;
+  color: #333;
+}
+.class-name h1 a {
+  color: #02f;
+  text-decoration: underline;
+}
+
+/* Nesting Symbol Selectors */
+.class-name > h2 {
+  line-height: 1.5em;
+}
+.class-name + h4 {
+  padding: .5em;
+}
+.class-name * {
+  color: #01f;
+}
+
+/* Nesting: Parent Selector */
+a {
+  color: #01f;
+  display: block;
+}
+a:hover {
+  color: #051;
+}
+.callout a {
+  color: #f00;
+}
+
+/* Nesting: Media Bubbling */
+header {
+  margin: 24px;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    margin: 20px;
+  }
+}
+
+/* Sass Variables */
+a {
+  color: #1d96bc;
+}
+
+/* Variable as Variable */
+h1 {
+  color: #1d96bc;
+}
+
+/* Text String Variable */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Interpolation Braces */
+@media only screen and (max-width: 768px) {
+  a {
+    font-size: 16px;
+  }
+}
+/* Mixin Usage */
+.button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* Mixins, Multiple Options */
+.button {
+  background: blue;
+  padding: 20px;
+  font-size: 18px;
+}
+
+/* Mixin and Logic */
+.button {
+  background-color: blue;
+  color: #fff;
+}
+
+.button-alt {
+  background-color: #dddddd;
+  color: #333;
+}
+
+/* Functions */
+h1 {
+  font-size: 0.875em;
+}
+
+/* Function, Multiple Inputs */
+.panel {
+  width: 25%;
+}
+
+/* @extend */
+.row, .hero {
+  *zoom: 1;
+}
+.row:before, .hero:before, .row:after, .hero:after {
+  content: " ";
+  display: table;
+}
+.row:after, .hero:after {
+  clear: both;
+}
+
+.hero {
+  color: #f00;
+}
+
+/* Math */
+#sidebar {
+  width: 250px;
+}
+
+/* Color, RGBA Function */
+p {
+  color: rgba(0, 0, 255, 0.75);
+}
+
+body a {
+  color: rgba(255, 255, 170, 0.25);
+}
+
+/* Color Manipulation */
+.class1 {
+  background: yellow;
+}
+
+.class2 {
+  background: #ff7f00;
+}
+
+.class3 {
+  background: gray;
+}
+
+.class4 {
+  background: #aa20f6;
+}
+
+.class5 {
+  background: #ffb200;
+}
+
+/* HSLA Manipulation */
+.hsla1 {
+  background: #f888f0;
+}
+
+.hsla2 {
+  background: #80fd8b;
+}
+
+.hsla3 {
+  background: #e4b03c;
+}
+
+.hsla4 {
+  background: #a49566;
+}
+
+.hsla5 {
+  background: #b8ff87;
+}
+
+.hsla6 {
+  background: #0b1901;
+}
+
+.hsla7 {
+  background: rgba(255, 187, 204, 0.5);
+}
+
+.hsla8 {
+  background: #ffbbcc;
+}

@@ -1,0 +1,186 @@
+/* Nesting Rules */
+.class-name {
+  background-color: #eee;
+
+  h1 {
+    font-size: 1.4em;
+    color: #333;
+
+    a {
+      color: #02f;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Nesting Symbol Selectors */
+.class-name {
+  > h2 { line-height: 1.5em; }
+  + h4 { padding: .5em; }
+  * { color: #01f; }
+}
+
+/* Nesting: Parent Selector */
+a {
+  color: #01f;
+  display: block;
+
+  &:hover { color: #051; }
+
+  .callout & { color: #f00; }
+}
+
+/* Nesting: Media Bubbling */
+header {
+  margin: 24px;
+
+  @media only screen and
+    (min-width: 768px) {
+      margin: 20px;
+  }
+}
+
+/* Sass Variables */
+$main-color: #1d96bc;
+
+a { color: $main-color; }
+
+/* Variable as Variable */
+$blue: #1d96bc;
+$main-color: $blue;
+
+h1 {
+  color: $main-color;
+}
+
+/* Text String Variable */
+$font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $font-stack;
+}
+
+/* Interpolation Braces */
+$small: "only screen and (max-width: 768px)";
+
+@media #{$small} {
+  a { font-size: 16px; }
+}
+
+/* Mixin Usage */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  @include border-radius(5px);
+}
+
+/* Mixins, Multiple Options */
+@mixin btn($bg:#f00, $pad:10px) {
+  background: $bg;
+  padding: $pad;
+  font-size: $pad - 2px;
+}
+
+.button {
+  @include btn(#00f,20px);
+}
+
+/* Mixin and Logic */
+@mixin btn($bg) {
+  $bg-lightness: lightness($bg);
+
+  background-color: $bg;
+
+  @if $bg-lightness > 70% {color: #333;}
+  @else {color: #fff;}
+}
+
+.button {
+  @include btn(#00f);
+}
+.button-alt {
+  @include btn(#ddd);
+}
+
+/* Functions */
+$em-base: 16px;
+
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+h1 {
+  font-size: emCalc(14px);
+}
+
+/* Function, Multiple Inputs */
+@function gridCalc($col,$total-col) {
+  @return percentage($col/$total-col);
+}
+
+@function gc($col,$total-col) {
+  @return gridCalc($col,$total-col);
+}
+
+.panel {
+  width: gc(3,12);
+}
+
+/* @extend */
+%clear-fix {
+  *zoom:1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { clear: both; }
+}
+
+.row { @extend %clear-fix; }
+.hero {
+  @extend %clear-fix;
+  color: #f00;
+}
+
+/* Math */
+$page: 960px;
+$main: 680px;
+$gutter: 30px;
+
+#sidebar {
+  width: $page - $main - $gutter;
+}
+
+/* Color, RGBA Function */
+p {
+  color: rgba(blue, .75);
+}
+
+body a {
+  color: rgba(#ffa, .25);
+}
+
+/* Color Manipulation */
+.class1 { background: invert(blue); }
+.class2 { background: mix(red,yellow); }
+.class3 { background: grayscale(yellow); }
+.class4 { background: complement(#6cf620); }
+.class5 { background: mix(red,yellow,30%); }
+
+/* HSLA Manipulation */
+.hsla1 { background: adjust-hue(#88B8F8,90); }
+.hsla2 { background: adjust-hue(#80B4FD,-90); }
+.hsla3 { background: saturate(#AD9B73,50%); }
+.hsla4 { background: desaturate(#e1b329,50%); }
+.hsla5 { background: lighten(#378700,50%); }
+.hsla6 { background: darken(#79f227,50%); }
+.hsla7 { background: fade-out(#fbc,.5); }
+.hsla8 { background: fade-in(rgba(#fbc,.5),.5); }
