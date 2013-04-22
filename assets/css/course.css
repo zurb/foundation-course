@@ -2,4 +2,17 @@ ul.breadcrumbs {
   background: none;
 }
 
+a .callout {
+  color: #fff;
+}
+
+.clearing-thumbs {
+  list-style-type: none;
+}
+.clearing-thumbs li {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 .show-grid .column, .show-grid .columns { border: solid 1px #eee; background: #f4f4f4; }
