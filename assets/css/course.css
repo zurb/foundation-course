@@ -6,6 +6,15 @@ a .callout {
   color: #fff;
 }
 
+ul[data-dropdown-content] {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.button-group ul[data-dropdown-content] {
+  margin: 0;
+}
+
 .clearing-thumbs {
   list-style-type: none;
 }
