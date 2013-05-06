@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Foundation 4</title>
+
+  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  <link rel="stylesheet" href="../../assets/css/foundation.min.css" />
+  <link rel="stylesheet" href="../../assets/css/course.css" />
+
+  <script src="../../assets/js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Foundation Training Materials</h2>
+      <h4>JavaScript</h4>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 column">
+      <ul class="breadcrumbs">
+        <li><a href="../">Home</a></li>
+        <li class="unavailable"><a href="#">Joyride</a></li>
+        <li class="current"><a href="#">example1.html</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <a href="#" data-dropdown="drop1" id="firstStop">Has Dropdown</a>
+
+      <ul id="drop1" class="f-dropdown" data-dropdown-content>
+        <li><a href="#">This is a link</a></li>
+        <li><a href="#">This is another</a></li>
+        <li><a href="#">Yet another</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <hr>
+      <h2>Cool Buildings</h2>
+      <h4 class="subheader">Beautiful Black &amp; White that your folks will love to hang on their wall.</h4>
+
+      <ul class="large-block-grid-3">
+        <li><img src="../../assets/img/demo1.jpg"></li>
+        <li><img src="../../assets/img/demo2.jpg"></li>
+        <li><img src="../../assets/img/demo3.jpg"></li>
+      </ul>
+      <ul class="large-block-grid-3">
+        <li class="so-awesome"><img src="../../assets/img/demo2.jpg"></li>
+        <li><img src="../../assets/img/demo3.jpg"></li>
+        <li><img src="../../assets/img/demo1.jpg"></li>
+      </ul>
+      <ul class="large-block-grid-3">
+        <li><img src="../../assets/img/demo3.jpg"></li>
+        <li><img src="../../assets/img/demo1.jpg"></li>
+        <li><img src="../../assets/img/demo2.jpg"></li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <ol class="joyride-list" data-joyride>
+    <li data-id="firstStop" data-text="Next" data-options="tipLocation:top;">
+      <p>Hello and welcome to the Joyride documentation page.</p>
+    </li>
+    <li data-class="so-awesome" data-text="Next" data-options="tipLocation:bottom;">
+      <h4>Stop #1</h4>
+      <p>You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.</p>
+    </li>
+    <li data-button="Next">
+      <h4>Stop #3</h4>
+      <p>It works as a modal too!</p>
+    </li>
+  </ol>
+
+  <script>
+    document.write('<script src=' +
+    ('__proto__' in {} ? '../../assets/js/vendor/zepto' : '../../assets/js/vendor/jquery') +
+    '.js><\/script>')
+  </script>
+  
+  <script src="../../assets/js/foundation.min.js"></script>
+  
+  <script>
+    $(document)
+      .foundation()
+      .foundation('joyride', 'start', {expose: true, modal:true});
+  </script>
+</body>
+</html>
