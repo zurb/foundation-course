@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Foundation 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation 5 JavaScript | Joyride</title>
 
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
   <link rel="stylesheet" href="../../assets/css/foundation.min.css" />
   <link rel="stylesheet" href="../../assets/css/course.css" />
-
+  
   <script src="../../assets/js/vendor/custom.modernizr.js"></script>
 
 </head>
@@ -78,11 +75,11 @@
   <br>
   <br>
 
-  <ol class="joyride-list" data-joyride>
-    <li data-id="firstStop" data-text="Next" data-options="tipLocation:top;">
+  <ol class="joyride-list" data-joyride data-options="expose: true;">
+    <li data-id="firstStop" data-text="Next" data-options="tip_location:top;">
       <p>Hello and welcome to the Joyride documentation page.</p>
     </li>
-    <li data-class="so-awesome" data-text="Next" data-options="tipLocation:bottom;">
+    <li data-class="so-awesome" data-text="Next" data-options="tip_location:bottom;">
       <h4>Stop #1</h4>
       <p>You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.</p>
     </li>
@@ -92,18 +89,11 @@
     </li>
   </ol>
 
-  <script>
-    document.write('<script src=' +
-    ('__proto__' in {} ? '../../assets/js/vendor/zepto' : '../../assets/js/vendor/jquery') +
-    '.js><\/script>')
-  </script>
-  
+  <script src="../../assets/js/vendor/jquery.js"></script>
   <script src="../../assets/js/foundation.min.js"></script>
   
   <script>
-    $(document)
-      .foundation()
-      .foundation('joyride', 'start', {expose: true, modal:true});
+    $(document).foundation().foundation('joyride', 'start');
   </script>
 </body>
 </html>

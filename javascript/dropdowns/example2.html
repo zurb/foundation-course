@@ -1,18 +1,12 @@
 
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation 5 JavaScript | Dropdowns</title>
 
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Welcome to Foundation | Blog</title>
-
-  <link rel="stylesheet" href="../../assets/css/normalize.css" />
-  <link rel="stylesheet" href="../../assets/css/foundation.css" />
+  <link rel="stylesheet" href="../../assets/css/foundation.min.css" />
   <link rel="stylesheet" href="../../assets/css/course.css" />
   
   <script src="../../assets/js/vendor/custom.modernizr.js"></script>
@@ -27,7 +21,7 @@
       <div class="nav-bar right">
        <ul class="button-group">
         <li>
-          <a href="#" class="button" data-dropdown="drop1">Link 1</a>
+          <a href="#" class="button" data-dropdown="drop1" data-options="is_hover: true;">Link 1</a>
           <ul id="drop1" class="f-dropdown" data-dropdown-content>
             <li><a href="#">This is a link</a></li>
             <li><a href="#">This is another</a></li>
@@ -158,15 +152,8 @@
     </div>
   </footer>
 
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? '../../assets/js/vendor/zepto' : '../../assets/js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-  
-  <script src="../../assets/js/foundation/foundation.js"></script>
-  
-  <script src="../../assets/js/foundation/foundation.dropdown.js"></script>
+  <script src="../../assets/js/vendor/jquery.js"></script>
+  <script src="../../assets/js/foundation.min.js"></script>
   
   <script>
     $(document).foundation();
