@@ -1,0 +1,74 @@
+<style>
+  .tree {position: relative; overflow:hidden;min-height: 300px;}
+.tree-body {position: absolute; background:#bedce4; overflow:hidden;min-height: 300px;}
+.tree-body p {
+  display:block;
+  height:0;
+  width:0;
+  border-style: solid;
+  border-width: 0 30px 100px 30px;
+  border-color: transparent transparent #526d44 transparent;
+  position:absolute;
+  top:5px;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  z-index:11;
+}
+
+.tree-body p:after {
+  content:'';
+  display:block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 100px 0 0 30px;
+  border-color: transparent transparent transparent rgba(0,0,0,.1);
+}
+
+.tree-body p:before {
+  width:20px;
+  height:12px;
+  background:#804b00;
+  content:'';
+  position:absolute;
+  top:100px;
+  left:-10px;
+}
+
+.tree-body div {
+  width: 322px;
+  height:550px;
+  background:#fff;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin: 60px 0 0 -162px;
+  transform:rotate(45deg);
+  border-radius: 160px;
+  z-index:10;
+}
+
+.tree-body span {
+  width:970px;
+  height:300px;
+  left:50%;
+  top:50%;
+  border-radius:2000px;
+  overflow:hidden;
+  display:block;
+}
+
+</style>
+
+<div class="tree">
+  <div class="tree-body">
+    <span>
+      
+      <p></p>
+      <div></div>
+
+    </span>
+  </div>
+</div>

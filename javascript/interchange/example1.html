@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation 5 JavaScript | Interchange</title>
+
+  <link rel="stylesheet" href="../../assets/css/foundation.min.css" />
+  <link rel="stylesheet" href="../../assets/css/course.css" />
+  
+  <script src="../../assets/js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Foundation Training Materials</h2>
+      <h4>JavaScript</h4>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 column">
+      <ul class="breadcrumbs">
+        <li><a href="../">Home</a></li>
+        <li class="unavailable"><a href="#">Interchange</a></li>
+        <li class="current"><a href="#">example1.html</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Interchange</h2>
+      <h4 class="subheader">Interchange uses media queries to dynamically load responsive content that is appropriate for different users' browsers.</h4>
+
+      <img data-interchange="[../../assets/img/interchange/space-small.jpg, (default)], [../../assets/img/interchange/space-medium.jpg, (medium)], [../../assets/img/interchange/space-large.jpg, (large)]">
+
+      <hr>
+
+      <h2>Content</h2>
+
+      <div data-interchange="[content/default.html, (default)], [content/medium.html, (medium)], [content/large.html, (large)]">
+        Loading...
+      </div>
+
+      <hr>
+
+    </div>
+  </div>
+
+  <script src="../../assets/js/vendor/jquery.js"></script>
+  <script src="../../assets/js/foundation.min.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
